@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Colaborador {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idcolaborador")
 	private Long id;
 	
