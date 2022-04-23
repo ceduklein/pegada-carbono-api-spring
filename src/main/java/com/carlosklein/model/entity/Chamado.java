@@ -21,7 +21,7 @@ public class Chamado {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	
 	@Column(name = "data")
 	private LocalDate dataInicio;
@@ -38,13 +38,13 @@ public class Chamado {
 	@Column(name = "concluido")
 	private boolean concluido;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_colaborador", nullable = false)
+	@ManyToOne
+	@JoinColumn(name = "id_colaborador")
 	@OnDelete(action = OnDeleteAction.NO_ACTION)
 	private Colaborador colaborador;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_veiculo", nullable = false)
+	@ManyToOne
+	@JoinColumn(name = "id_veiculo")
 	@OnDelete(action = OnDeleteAction.NO_ACTION)
 	private Veiculo veiculo;
 		
@@ -60,10 +60,10 @@ public class Chamado {
 	
 	public Chamado() {}
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public LocalDate getDataInicio() {
