@@ -15,10 +15,14 @@ A Empresa Y possui 22 colaboradores habilitados a conduzir os veículos de atend
 ## **Cálculo de CO2 emitido por litro de gasolina**
 
 CG x 0,82 x 0,75 x 3,7 = total de kg CO2 emitido por litro
+
 CG = consumo de gasolina, em litros
+
 0,82 = percentual de gasolina em um litro, descontado o percentual de etanol
 (no Brasil a proporção de etanol é de 18% a 25%)
+
 0,75 = densidade da gasolina
+
 3,7 = fator de transformação da gasolina em CO2
 
 Fonte: <https://esalqlastrop.com.br/capa.asp?pi=calculadora_emissoes>
@@ -67,16 +71,16 @@ Fonte: <https://esalqlastrop.com.br/capa.asp?pi=calculadora_emissoes>
 * **Atualizar - PUT** `/veiculos/{id}`
 ```
 {
-  "modelo": "Modelo Veículo",
-  "placa": "PLC1234",
-  "kmLitro": 10.5
+  "modelo": "Modelo Veículo Atualizado",
+  "placa": "PLC4321",
+  "kmLitro": 11
 }
 ```
 * **Listar Todos - GET** `/veiculos`
 * **Buscar por id - GET** `/veiculos/{id}`
 * **Excluir - DEL** `/veiculos/{id}`
 
-### **Veículos**
+### **Chamados**
 * **Criar Chamado - POST** `/chamados`
 ```
 {
