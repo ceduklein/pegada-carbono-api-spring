@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.carlosklein.exception.RegraNegocioException;
@@ -25,7 +26,7 @@ public class ColaboradorService {
 	}
 	
 	public List<Colaborador> list() {
-		return repository.findAll();
+		return repository.findAll(Sort.by(Sort.Direction.ASC, "id"));
 	}
 	
 	public Optional<Colaborador> findById(Long id) {
