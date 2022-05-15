@@ -51,6 +51,7 @@ public class ChamadoService {
 		if (chamado.getDistancia() < 1)
 			throw new RegraNegocioException("Erro: Distância inválida.");
 		
+		chamado.calcularPegadaCarbono();
 		repository.save(chamado);
 	}
 	
